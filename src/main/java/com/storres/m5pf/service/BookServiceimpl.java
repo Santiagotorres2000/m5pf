@@ -11,6 +11,11 @@ import com.storres.m5pf.model.Book;
 import com.storres.m5pf.model.EstadoLibro;
 
 @Service
+//JAVADOC
+/**
+ * esta clase implementa los metodos para el uso del BookController
+ * tenemos metodos de crud 
+ */
 public class BookServiceimpl implements Bookservice {
 
     private Map<Long, Book> books;
@@ -44,7 +49,13 @@ public class BookServiceimpl implements Bookservice {
 
         return book;
     }
-
+/**
+ * actualiza el objeto Book book 
+ * 
+ * @param id identificacion una genera por automaticamente por el 
+ * @param  objecto de Book tipo book
+ * @throws illegalArgumentsException en caso de que no se pueda encontrar el id del libro
+ */
     @Override
     public Book upgradeBook(Long id, Book book) {
         var existing = books.get(id);
